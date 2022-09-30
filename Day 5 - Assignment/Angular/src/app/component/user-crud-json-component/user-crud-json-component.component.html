@@ -1,0 +1,52 @@
+<div>
+    <table class="table table-bordered" style="text-align:center; table-layout: fixed;">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Location</th>
+            <th>Country</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tr *ngFor='let user of usersList'>
+            <td>{{user.id}}</td>
+            <td>{{user.name}}</td>
+            <td>{{user.address}}</td>
+            <td>{{user.location}}</td>
+            <td>{{user.country}}</td>
+            <td><span><input class="btn btn-warning" type="button" (click)="editUser(user.id)" value=" Edit "></span></td>
+            <td><span><input class="btn btn-danger" type="button" (click)="deleteUser(user.id)" value="Delete"></span></td>
+        </tr>
+
+    </table>
+</div>
+<h1 style="text-align: center;">Form to add/edit data to users table</h1>
+<form ngForm>
+    <div class="form-group">
+        <label for="ID">ID</label>
+        <input type="text" class="form-control" id="ID" [(ngModel)]="user.id" name="ID">
+    </div>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" [(ngModel)]="user.name" name="name">
+    </div>
+    <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="address" [(ngModel)]="user.address" name="address">
+    </div>
+    <div class="form-group">
+        <label for="location">Location</label>
+        <input type="text" class="form-control" id="location"  [(ngModel)]="user.location" name="location">
+    </div>
+    <div class="form-group">
+        <label for="country">Country</label>
+        <input type="text" class="form-control" id="country"  [(ngModel)]="user.country" name="country">
+    </div>
+
+    <div style="text-align: center;">
+        <button type="submit" class="btn btn-outline-success" (click)=" addNewUser()">Submit</button>
+        <button type="submit" class="btn btn-outline-primary" (click)=" confirmUserEdit()">Confirm Edit</button>
+    </div>
+
+</form>

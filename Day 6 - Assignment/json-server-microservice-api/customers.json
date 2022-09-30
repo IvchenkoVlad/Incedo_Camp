@@ -1,0 +1,46 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "Robert",
+      "address": "123 Schwartz Street",
+      "location": "Brooklyn, NY"
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "address": "444 Coney Island Street",
+      "location": "Queens, NY"
+    },
+    {
+      "id": 3,
+      "name": "Robert",
+      "address": "123 Schwartz Street",
+      "location": "Brooklyn, NY"
+    },
+    {
+      "id": 4,
+      "name": "Robert",
+      "address": "123 Schwartz Street",
+      "location": "Brooklyn, NY"
+    },
+    {
+      "id": 5,
+      "name": "Robert",
+      "address": "123 Schwartz Street",
+      "location": "Brooklyn, NY"
+    },
+    {
+      "id": 6,
+      "name": "Robert",
+      "address": "123 Schwartz Street",
+      "location": "Brooklyn, NY"
+    },
+    {
+      "id": 7,
+      "name": "Test",
+      "address": "123 Test Street",
+      "location": "Tes, NY"
+    }
+  ]
+}

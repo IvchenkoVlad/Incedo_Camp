@@ -1,0 +1,46 @@
+{
+  "users": [
+    {
+      "id": 4,
+      "name": "Robert Wittaker",
+      "address": "123 Schwartz Street",
+      "location": "Long Bong, MN",
+      "country": "United States"
+    },
+    {
+      "id": "5",
+      "name": "Vlad Testing",
+      "address": "123 Main Street",
+      "location": "Brooklyn NY",
+      "country": "United States"
+    },
+    {
+      "id": "7",
+      "name": "Vladyslav Ivchenko",
+      "address": "2345 Cornell Street",
+      "location": "Santa Clara",
+      "country": "United States"
+    },
+    {
+      "id": "1",
+      "name": "Glenn Chase",
+      "address": "111 Ronald R. Blvd",
+      "location": "Tirell MO",
+      "country": "United States"
+    },
+    {
+      "id": "9",
+      "name": "Vlad Ivchenko Edited",
+      "address": "1802 Farhamton Drive",
+      "location": "Staten Island",
+      "country": "United States"
+    },
+    {
+      "id": "11",
+      "name": "Vladyslav Ivchenko",
+      "address": "2345 Cornell Street",
+      "location": "Santa Clara",
+      "country": "United States"
+    }
+  ]
+}
