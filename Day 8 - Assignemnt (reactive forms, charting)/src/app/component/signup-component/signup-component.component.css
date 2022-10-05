@@ -1,0 +1,25 @@
+.content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    max-width: 960px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content h3{
+    text-align: center; 
+    color: white;
+    text-shadow: 3px 3px 3px black;
+    background-color: #454545b1;;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px black;    
+}
+
+.container {
+    display: inline-table;
+}
+
+.container a {
+    margin-left: 20px;
+}

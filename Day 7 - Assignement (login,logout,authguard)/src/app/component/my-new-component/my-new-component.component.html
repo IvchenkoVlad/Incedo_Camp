@@ -1,0 +1,33 @@
+<form ngForm>
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name">
+    </div>
+    <div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" id="age" required [(ngModel)]="model.age" name="age">
+        </div>
+
+        <button type="submit" class="btn btn-danger" (click)=" createCustomer()">Submit</button> <span> </span>
+        <button type="submit" class="btn btn-warning" (click)=" confirmEditCustomer()">Confirm Edit</button>
+    </div>
+</form>
+
+<div>
+    <table class="table table-bordered">
+        <tr appHighlightDirective value="silver" *ngIf="custArray.length > 0">
+            <th>Name</th>
+            <th>Age</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        <tr appHighlightDirective value="yellow" *ngFor='let cust of custArray; index as i;'>
+            <td>{{cust.name | lowercase}}</td>
+            <td>{{cust.age | testPipe : 2}}</td>
+            <td><input type="button" (click)="editCustomer(i)" value="Edit"></td>
+            <td><input type="button" (click)="deleteCustomer(i)" value="Delete"></td>
+        </tr>
+
+    </table>
+</div>

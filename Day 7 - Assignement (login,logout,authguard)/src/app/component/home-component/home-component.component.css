@@ -1,0 +1,25 @@
+/* .fill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden
+}
+.fill img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%;
+    
+} */
+a{
+    display: inline-block;
+    padding: 12px;
+    font-size: 20px;
+    text-shadow: 4px 4px 4px rgb(169, 169, 249);
+
+}
+.nav-bar{
+    background-color: rgb(238, 238, 238);
+    border-radius: 25px;
+    text-align: center;
+    width: 100%;
+}

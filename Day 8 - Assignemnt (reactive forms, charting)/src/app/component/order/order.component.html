@@ -1,0 +1,13 @@
+<div style="text-align: center;">
+    <nav>
+        <a [routerLink]="['/dashboard/order/normalOrder']">Normal Order</a>
+        <a [routerLink]="['/dashboard/order/premiumOrder']">Premium Order</a>
+    </nav>
+
+    <div style="color: red; margin-top: 1rem;">
+        This is the place where two child components are displayed.
+    </div>
+    <div style="border: 2px solid red; padding: 1rem; text-align: center; font-size: 18px;">
+        <router-outlet></router-outlet>
+    </div>
+</div>

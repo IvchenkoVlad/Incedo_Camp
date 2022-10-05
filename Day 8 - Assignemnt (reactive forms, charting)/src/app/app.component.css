@@ -1,0 +1,16 @@
+a{
+    display: inline-block;
+    color:black;
+    margin-left: 20px;
+    padding: 12px;
+    font-size: 14px;
+    font-weight: bold;
+    text-shadow: 4px 4px 4px #000000;
+
+}
+.nav-bar{
+    background-color: #454545b1;
+    border-radius: 25px;
+    text-align: center;
+    width: 100%;
+}
