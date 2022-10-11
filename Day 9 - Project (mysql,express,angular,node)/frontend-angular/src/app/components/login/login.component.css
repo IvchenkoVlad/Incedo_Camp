@@ -1,0 +1,46 @@
+
+.links{
+    font-size: 20px; 
+    text-align: center;
+
+}
+.links a{
+    text-decoration: none; 
+    color: cornflowerblue;
+    text-shadow: 2px 2px 2px cornflowerblue;
+}
+.links :hover{
+    text-decoration: none; 
+    color: orange;
+}
+.content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+  }
+
+.mini{
+    line-height: 10px;
+}
+
+.password-container{
+    width: 378px;
+    position: relative;
+  }
+.password-container input[type="password"],
+.password-container input[type="text"]{
+  width: 100%;
+  /* padding: 12px 30px 12px 12px; */
+  box-sizing: border-box;
+}
+.fa-eye{
+  position: absolute;
+  top: 30%;
+  right: 4%;
+  cursor: pointer;
+  color: lightgray;
+}
