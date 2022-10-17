@@ -1,0 +1,40 @@
+.content {
+    display: flex;
+    margin: 82px auto 32px;
+    padding: 0 16px;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    border-style: groove;
+    box-shadow: 8px 8px grey;
+  }
+  .mini{
+    line-height: 10px;
+  }
+
+  .password-container{
+    width: 100%;
+    position: relative;
+  }
+.password-container input[type="password"],
+.password-container input[type="text"]{
+  width: 100%;
+  /* padding: 12px 30px 12px 12px; */
+  box-sizing: border-box;
+}
+.bi {
+  position: absolute;
+  top: 56%;
+  left: 60%;
+  cursor: pointer;
+}
+
+.bi2 {
+  position: absolute;
+  top: 64%;
+  left: 60%;
+  cursor: pointer;
+}
+.req{
+  color: red;
+}
