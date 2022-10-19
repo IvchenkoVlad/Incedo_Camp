@@ -1,0 +1,4 @@
+.table-hover tbody tr:hover td {
+    background: rgb(243, 250, 251);
+    /* background: rgb(221, 252, 254); */
+}
