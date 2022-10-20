@@ -1,0 +1,86 @@
+<!-- <input class="btn btn-secondary" type="file" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener1($event)"
+accept=".csv" /> -->
+<div *ngIf="listOfProjects.length == 0">
+<div class="content" style="text-align:center;width: 23%;">
+    <p style="font-weight:bold;font-size: 20px;text-shadow: 3px 3px 3px silver;">Please select the file to work with...</p>
+    <input class="form-control"type="file" #fileImportInput name="File Upload" id="csvFileUpload" (change)="fileChangeListener1($event)" accept=".csv">
+  </div>
+</div>
+
+<!-- <h1
+    style="text-align: center; background-color: rgb(239, 239, 239); box-shadow: 4px 4px grey; text-shadow: 2px 2px 2px silver; width: 50%; margin: auto;border-radius: 20px;">
+    Allowance Dashboard</h1>
+<br>
+<div style="text-align: center; margin: auto; width: 30%;">
+        <h4>Select specific area of designation here</h4>
+            <select class="form-select" style="text-align: center;" #a
+        (change)="getAreaSpecificData(a.value)">
+        <option selected>All</option>
+        <option *ngFor="let area of designationArea" [ngValue]="area" value="{{area.id}}">{{area.areaname}}</option>
+    </select>
+    <br>
+    <h4>Specify the range of project span</h4>
+    <input id="date" class="form-control" style="text-align: center;" type="text" name="daterange" value="09/01/2022 - 09/30/2022"/>
+    <br>
+    <button  type="submit" class="btn btn-outline-secondary" (click)="getTimeSpecificData()">Reflect dated projects</button>
+    <br><br>
+
+</div> -->
+<!-- <input id="date" class="form-control" style="text-align: center;" type="text" name="daterange" value="09/01/2022 - 09/30/2022"/>
+<br>
+<button  type="submit" class="btn btn-outline-secondary" (click)="getTimeSpecificData()">Reflect dated projects</button>
+<br><br> -->
+<div *ngIf="listOfProjects.length != 0">
+    <h1
+    style="text-align: center; background-color: rgb(239, 239, 239); box-shadow: 4px 4px grey; text-shadow: 2px 2px 2px silver; width: 50%; margin: auto;border-radius: 20px;">
+    Allowance Dashboard</h1><br>
+    <div style="text-align: center; margin: auto; width: 30%;">
+            <h4>Select specific area of designation here</h4>
+            <select class="form-select" style="text-align: center;" #a
+        (change)="getAreaSpecificData(a.value)">
+        <option value="0"selected>All</option>
+        <option value="1">Digital</option>
+        <option value="2">Enterprise Platforms</option>
+        <option value="3">CET</option>
+        <option value="4">Data</option>
+    </select>
+    </div>
+    <br>
+
+    <table class="table table-striped table-bordered table-hover"
+    style="text-align:center; vertical-align: middle;table-layout: fixed;">
+    <thead style="text-align:center; vertical-align: middle;">
+        <tr>
+            <th scope="col" (click)="sortByProjectName()">Name</th>
+            <th scope="col" (click)="sortBySapId()">SAP ID</th>
+            <th scope="col">Project Hours</th>
+            <th scope="col">Holiday/Leave Hours</th>
+            <th scope="col">Afternoon Shift Days</th>
+            <th scope="col">Night Shift Days</th>
+            <th scope="col">Days Eligible for TA</th>
+            <th scope="col">Transportation Allowance</th>
+            <th scope="col">Total Allowance</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let project of listOfProjects; let i = index">
+            <td>{{project.name}}</td>
+            <td style="font-weight: bold;">{{project.sapid}}</td>
+            <td>{{project.projecthours}}</td>
+            <td>{{project.leaveholidayhours}}</td>
+            <td><input style="text-align: center;" type="number" min="0" max="999" class="form-control" onkeydown="return false" [(ngModel)]="project.noonshifts"></td>
+            <td><input style="text-align: center;" type="number" min="0" max="999" class="form-control" onkeydown="return false" [(ngModel)]="project.nightshifts"></td>
+            <td><input style="text-align: center;" type="number" min="0" max="999" class="form-control" onkeydown="return false" [(ngModel)]="project.taeligibledays"></td><!-- <td>{{project.taeligibledays | daypipe}}</td> -->
+            <td>{{project.transportationallowance | currency:'USD'}}</td>
+            <td>{{project.totalallowance | currency:'USD'}}</td>
+        </tr>
+    </tbody>
+</table>
+<div style="text-align: center;">
+   <p> <button  type="button" id="download-button" class="btn btn-success" (click)="approveAndDownload()">Download in .cvs format</button></p>
+    <!-- <button  type="button" id="download-button" class="btn btn-outline-secondary" (click)="post()">TO DB</button> -->
+    <p> <button  type="button" id="download-button" class="btn btn-outline-info" (click)="post()">Approve and Push to the Database</button> </p>
+    <p> <button  type="button" id="download-button" class="btn btn-danger" (click)="startOver()">Start over</button> </p>
+</div>
+</div>
+<div *ngIf="listOfProjects.length == 0"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>

@@ -1,0 +1,18 @@
+.float-container {
+    border: 3px solid #fff;
+    padding: 20px;
+}
+
+.float-child {
+    width: 50%;
+    float: left;
+    padding: 20px;
+    text-align: center;
+} 
+.content {
+    display: flex;
+    margin: 0px auto 32px;
+    padding: 0 16px;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;  }
